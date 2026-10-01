@@ -12,7 +12,7 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
 
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN environment variable is missing")
